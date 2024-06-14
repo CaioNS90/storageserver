@@ -7,6 +7,7 @@
 >     --volume-type gp3 \
 >     --size 80 \
 >     --availability-zone us-west-2b
+SAÍDA <br>
 {
     "AvailabilityZone": "us-west-2b", <br>
     "CreateTime": "2024-06-14T21:48:24+00:00", <br>
@@ -24,6 +25,8 @@
 
 #Attach volume <br>
 [cloudshell-user@ip-10-130-55-145 ~]$ aws ec2 attach-volume --volume-id vol-0158f6e3320f2a19c --instance-id i-0ef2c7cf4a68ac2c6 --device /dev/sdf <br>
+
+SAÍDA <br>
 {
     "AttachTime": "2024-06-14T21:51:29.353000+00:00", <br>
     "Device": "/dev/sdf",
