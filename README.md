@@ -24,7 +24,11 @@ SAÍDA <br>
 }
 
 #Attach volume <br>
-[cloudshell-user@ip-10-130-55-145 ~]$ aws ec2 attach-volume --volume-id vol-0158f6e3320f2a19c --instance-id i-0ef2c7cf4a68ac2c6 --device /dev/sdf <br>
+[cloudshell-user@ip-10-130-55-145 ~]$ <br>
+aws ec2 attach-volume <br>
+--volume-id vol-0158f6e3320f2a19c <br>
+--instance-id i-0ef2c7cf4a68ac2c6 <br>
+--device /dev/sdf <br>
 
 SAÍDA <br>
 {
