@@ -33,49 +33,49 @@
 }
 
 =====================================================================================================================================================================
-# Montando disco no linux 
+# Montando disco no linux <br>
 
-Primeiro é preciso saber quais são os discos que estão atachados nas maquinas
+Primeiro é preciso saber quais são os discos que estão atachados nas maquinas <br>
 ```bash
 fdisk -l
 ```
-Ex.
+Ex. <br>
 
-CRIANDO O PARTICIONAMENTO
-Após identificar o disco, agora vamos criar a partição dentro do disco com o comando
+CRIANDO O PARTICIONAMENTO <br>
+Após identificar o disco, agora vamos criar a partição dentro do disco com o comando <br>
 
 ```bash
 fdisk <disco>
 ```
-Ex. fdisk /dev/nvme2n1
-Os comandos do FDISK são:
-m - help
-n - para a criação da partição
-1 - Digita “p” para a criação da partição primária
-2 - Pergunta o número da partição que vai de 1 - 4, por padrão é 1
-3 - Pergunta pelo primeiro setor, por padrão é 2048.
-4 - Por ultimo qual é o ultimo setor (pode digitar +size{K,M G} o tamanho que deseja, ou se preferir o disco inteiro aperta enter que ele define o padrão).
-Ao final para gravar digita “w”
-p - para listar as partições
+Ex. fdisk /dev/nvme2n1 <br>
+Os comandos do FDISK são: <br>
+m - help <br>
+n - para a criação da partição <br>
+1 - Digita “p” para a criação da partição primária <br>
+2 - Pergunta o número da partição que vai de 1 - 4, por padrão é 1 <br>
+3 - Pergunta pelo primeiro setor, por padrão é 2048. <br>
+4 - Por ultimo qual é o ultimo setor (pode digitar +size{K,M G} o tamanho que deseja, ou se preferir o disco inteiro aperta enter que ele define o padrão). <br>
+Ao final para gravar digita “w” <br>
+p - para listar as partições <br>
 q - para sair
 
-FORMATANDO O DISCO
-O comando para a formatação do disco é o:
+FORMATANDO O DISCO <br>
+O comando para a formatação do disco é o: <br>
 
 ```bash
 mkfs.ext4 <partição criada>
 ```
-ex.: mkfs.ext4 /dev/nvme0n1p1
+ex.: mkfs.ext4 /dev/nvme0n1p1 <br>
 
-MONTANDO A PARTIÇÃO
-Precisa ter um diretório de destino
-Criar um diretório para o ponto de montagem
+MONTANDO A PARTIÇÃO <br>
+Precisa ter um diretório de destino <br>
+Criar um diretório para o ponto de montagem <br>
 
 ```bash
 mkdir <diretorio>
 ```
-ex.: mkdir /montagem/
-Para montar o disco digite o comando
+ex.: mkdir /montagem/ <br>
+Para montar o disco digite o comando <br>
 
 ```bash
 mount -t <tipo> <partição> <diretorio de montagem>
