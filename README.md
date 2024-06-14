@@ -52,7 +52,7 @@ CRIANDO O PARTICIONAMENTO <br>
 Após identificar o disco, agora vamos criar a partição dentro do disco com o comando <br>
 
 ```bash
-fdisk <disco>
+fdisk /dev/xvdf1
 ```
 Ex. fdisk /dev/nvme2n1 <br>
 Os comandos do FDISK são: <br>
@@ -70,7 +70,7 @@ FORMATANDO O DISCO <br>
 O comando para a formatação do disco é o: <br>
 
 ```bash
-mkfs.ext4 <partição criada>
+mkfs.ext4 /dev/xvdf1
 ```
 ex.: mkfs.ext4 /dev/nvme0n1p1 <br>
 
@@ -79,12 +79,13 @@ Precisa ter um diretório de destino <br>
 Criar um diretório para o ponto de montagem <br>
 
 ```bash
-mkdir <diretorio>
+mkdir /banda
 ```
 ex.: mkdir /montagem/ <br>
 Para montar o disco digite o comando <br>
 
 ```bash
-mount -t <tipo> <partição> <diretorio de montagem>
+mount -t ext4 /dev/xvdf1 /banda
+
 ```
 ex.: mount -t ext4 /dev/nvme0n1p1 /montagem/
